@@ -76,13 +76,12 @@ Berikut template tabel ringkasan benchmark untuk dicatat pada portofolio atau CV
 | Skenario | VU | p95 (ms) | Throughput (req/s) | Error rate |
 | :--- | :---: | :---: | :---: | :---: |
 | Smoke Test (10s, laptop i5-1135G7) | 5 | 50,67 | 97,45 | 0,00% |
-| Peak Load Test (2 menit, laptop i5-1135G7) | 250 | - | - | - |
+| Peak Load Test (1 menit, laptop i5-1135G7) | 250 | 50,12 | 5.047 | 0,00% |
 
-Baris Peak Load Test diisi setelah menjalankan skenario penuh.
-
-Referensi smoke test terukur (5 VU, 10 detik, k6 v1.x di i5-1135G7):
-- p(95) = 50,67 ms, rata-rata 13,86 ms, throughput 97,45 req/s, error rate 0,00%.
-- Hasil benchmark internal Go (`go test -bench=. -benchmem`): CacheHit ≈ 4,4 µs/op, CacheMiss ≈ 50 ms/op (simulasi kerja backend 50 ms).
+Referensi peak test terukur (250 VU, 1 menit, k6 v1.x di i5-1135G7):
+- p(95) = 50,12 ms, throughput 5.047 req/s, error rate 0,00%.
+- Total 303.588 request berhasil diproses dalam 60 detik.
+- Hasil benchmark internal Go (`go test -bench=. -benchmem`): CacheHit ≈ 4,4 µs/op, CacheMiss ≈ 50 ms/op.
 
 ### Hasil Aktual
 
