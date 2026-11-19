@@ -1,0 +1,17 @@
+# Binary
+go-k6-benchmark
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test dan benchmark artifacts
+*.out
+*.test
+hasil.json
+
+# IDE dan lingkungan lokal
+.DS_Store
+.idea/
+.vscode/
